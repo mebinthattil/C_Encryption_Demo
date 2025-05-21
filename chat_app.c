@@ -37,7 +37,7 @@ int main() {
         fgets(message, MAX_MESSAGE_LENGTH, stdin); // reading string
         message[strcspn(message, "\n")] = 0;
 
-        // Check if user has skill issue and want's to dip
+        // Check if user has skill issue and wants to dip
         if (strcmp(message, "\\quit") == 0) {
             printf("Exiting the application. Goodbye!\n");
             break;
@@ -82,7 +82,7 @@ int main() {
                 getchar();
 
                 for (int i = 0; i < keylen; i++) {
-                    key[i] = 'A' + (rand() % 26); // generate a rand char and create a 16 char key
+                    key[i] = 'A' + (rand() % 26); // generate a rand char of given keylen
                 }
                 key[keylen] = '\0';
                 printf("Generated Key for Symmetric Encryption: %s\n", key);
